@@ -1,13 +1,6 @@
 {
-  "files": {
-    "main.css": "/ps-react-pp/static/css/main.e62e0be0.css",
-    "main.js": "/ps-react-pp/static/js/main.a2d9f7d0.js",
-    "index.html": "/ps-react-pp/index.html",
-    "main.e62e0be0.css.map": "/ps-react-pp/static/css/main.e62e0be0.css.map",
-    "main.a2d9f7d0.js.map": "/ps-react-pp/static/js/main.a2d9f7d0.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.e62e0be0.css",
-    "static/js/main.a2d9f7d0.js"
-  ]
+  "main.css": "static/css/main.59dc7cc7.css",
+  "main.css.map": "static/css/main.59dc7cc7.css.map",
+  "main.js": "static/js/main.ee7ab70d.js",
+  "main.js.map": "static/js/main.ee7ab70d.js.map"
 }
