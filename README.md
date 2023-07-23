@@ -10,7 +10,7 @@ npm install ps-react
 
 ## Docs
 
-[Component documentation](http://coryhouse.github.io/ps-react)
+[Component documentation](https://piwczak.github.io/ps-react-pp)
 
 ## Component Hall of Fame 🎉
 
