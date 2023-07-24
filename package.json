@@ -2,22 +2,25 @@
   "name": "ps-react-pp",
   "version": "0.1.0",
   "main": "./lib/index.js",
-  "private": true,
   "engines": {
     "node": ">=4.0.0"
+  },
+  "author": {
+    "name": "Przemek Piwowarczyk",
+    "email": "przemek.piwowarczyk@mail.edu",
+    "url": "http://przemek.com.pl"
   },
   "files": [
     "lib"
   ],
   "keywords": [
-    "components",
+    "component  s",
     "react",
     "react-component",
     "toolkit",
     "pluralsight"
   ],
   "dependencies": {
-    "highlight.js": "^9.10.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "styled-components": "^1.4.5"
@@ -83,8 +86,13 @@
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "build:css": "cpx \"./src/components/**/*.css\" ./lib",
     "predeploy:docs": "npm run build:docs",
-    "deploy:docs": "gh-pages -d build"
+    "deploy:docs": "gh-pages -d build",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore spec.js",
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "npm run build:commonjs && npm run build:css",
+    "prepublish": "npm run build:lib"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -112,6 +120,12 @@
   },
   "babel": {
     "presets": [
+      [
+        "env",
+        {
+          "modules": "commonjs"
+        }
+      ],
       "react-app"
     ]
   },
